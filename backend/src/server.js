@@ -14,6 +14,7 @@ const loanRoutes = require('./routes/loanRoutes');
 const loanPaymentRoutes = require('./routes/loanPaymentRoutes');
 const savingsPlanRoutes = require('./routes/savingsPlanRoutes');
 const savingsPaymentRoutes = require('./routes/savingsPaymentRoutes');
+const dashboardRoutes = require('./routes/dashboardRoutes');
 
 const app = express();
 
@@ -32,6 +33,7 @@ app.use('/api/loans', loanRoutes);
 app.use('/api/loan-payments', loanPaymentRoutes);
 app.use('/api/savings-plans', savingsPlanRoutes);
 app.use('/api/savings-payments', savingsPaymentRoutes);
+app.use('/api/dashboard', dashboardRoutes);
 
 // Test route
 app.get('/', (req, res) => {

@@ -8,6 +8,10 @@ const connectDB = require('./config/db');
 // Routes
 const authRoutes = require('./routes/authRoutes');
 const customerRoutes = require('./routes/customerRoutes');
+const authRoutes = require('./routes/authRoutes');
+const customerRoutes = require('./routes/customerRoutes');
+const loanRoutes = require('./routes/loanRoutes');
+const loanPaymentRoutes = require('./routes/loanPaymentRoutes');
 
 const app = express();
 
@@ -20,6 +24,10 @@ app.use(morgan('dev'));
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/customers', customerRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/customers', customerRoutes);
+app.use('/api/loans', loanRoutes);
+app.use('/api/loan-payments', loanPaymentRoutes);
 
 // Test route
 app.get('/', (req, res) => {
